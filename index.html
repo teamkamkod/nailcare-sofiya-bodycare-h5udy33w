@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NailCare Sofiya BodyCare 💅 | Nagelstudio & Schoonheidssalon in Antwerpen</title>
+<meta name="description" content="NailCare Sofiya BodyCare in Antwerpen: nagelstudio en schoonheidssalon met 4,9 sterren uit 312 reviews. Belgiëlei 206/208, 2018 Antwerpen. Boek nu!">
+<meta name="keywords" content="nagelstudio Antwerpen, schoonheidssalon Antwerpen, gelnagels Antwerpen, manicure Antwerpen, pedicure Antwerpen, bodycare Antwerpen, ontharing Antwerpen, gezichtsbehandeling Antwerpen">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #12100E;
+    --secondary: #C9A227;
+    --background: #F7F3EA;
+    --text: #1C1917;
+    --cta: #C9A227;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Outfit', sans-serif;
+    --radius: 0;
+    --spacing-section: 100px;
+    --spacing-section-mobile: 64px;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--background);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--primary);
+    line-height: 1.2;
+  }
+
+  img { max-width: 100%; display: block; }
+
+  a { text-decoration: none; color: inherit; }
+
+  .cta {
+    display: inline-block;
+    background-color: var(--cta);
+    color: #fff;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 14px 36px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border-radius: var(--radius);
+  }
+
+  .cta:hover {
+    background-color: #a8841e;
+    transform: translateY(-2px);
+  }
+
+  .section-label {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* FADE-IN ANIMATION */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ===================== NAV ===================== */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(18, 16, 14, 0.96);
+    backdrop-filter: blur(8px);
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+  }
+
+  .nav-logo {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    color: var(--secondary);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  nav ul li a {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #e8e0d0;
+    transition: color 0.3s;
+  }
+
+  nav ul li a:hover { color: var(--secondary); }
+
+  nav ul li.nav-cta a {
+    background: var(--secondary);
+    color: #fff;
+    padding: 10px 22px;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+
+  nav ul li.nav-cta a:hover { background: #a8841e; }
+
+  .burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+    aria-label: "Menu";
+  }
+
+  .burger span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: #e8e0d0;
+    transition: all 0.3s;
+  }
+
+  @media (max-width: 767px) {
+    .burger { display: flex; }
+
+    nav ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 68px;
+      left: 0;
+      right: 0;
+      background: rgba(18, 16, 14, 0.98);
+      padding: 24px 0 32px;
+      gap: 0;
+      align-items: center;
+    }
+
+    nav ul.open {
+      display: flex;
+    }
+
+    nav ul li {
+      width: 100%;
+      text-align: center;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 14px 0;
+      font-size: 0.9rem;
+    }
+
+    nav ul li.nav-cta a {
+      margin: 12px auto 0;
+      display: inline-block;
+      width: auto;
+      padding: 12px 32px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    nav ul {
+      display: flex !important;
+      flex-direction: row;
+      position: static;
+      background: none;
+      padding: 0;
+    }
+  }
+
+  /* ===================== HERO ===================== */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: var(--primary);
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('assets/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.45;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(18,16,14,0.92) 0%, rgba(18,16,14,0.55) 60%, rgba(18,16,14,0.2) 100%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 620px;
+  }
+
+  .hero-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .hero-stars {
+    color: var(--secondary);
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .hero-rating-text {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    color: #c8bfaf;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+
+  #hero h1 {
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    color: #fff;
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+
+  .hero-sub {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--secondary);
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .hero-text {
+    font-size: 1.05rem;
+    color: #d4c9b8;
+    margin-bottom: 36px;
+    max-width: 500px;
+    line-height: 1.8;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .cta-outline {
+    display: inline-block;
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 12px 32px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: transparent;
+  }
+
+  .cta-outline:hover {
+    background: var(--secondary);
+    color: #fff;
+  }
+
+  /* ===================== ABOUT ===================== */
+  #apropos {
+    padding: var(--spacing-section) 0;
+    background: var(--background);
+  }
+
+  .about-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .about-text-col .section-label { margin-bottom: 12px; }
+
+  .about-text-col h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    margin-bottom: 24px;
+  }
+
+  .about-text-col p {
+    font-size: 1.05rem;
+    color: #4a4540;
+    line-height: 1.85;
+    margin-bottom: 20px;
+  }
+
+  .about-img-col {
+    position: relative;
+  }
+
+  .corner-frame {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .corner-frame img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .corner-frame::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    width: 60px;
+    height: 60px;
+    border-top: 3px solid var(--secondary);
+    border-left: 3px solid var(--secondary);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .corner-frame::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    right: -12px;
+    width: 60px;
+    height: 60px;
+    border-bottom: 3px solid var(--secondary);
+    border-right: 3px solid var(--secondary);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .about-badges {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+  }
+
+  .about-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-badge-num {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--secondary);
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .about-badge-label {
+    font-size: 0.8rem;
+    color: #7a7068;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  @media (min-width: 768px) {
+    .about-inner {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  /* ===================== BEHANDELINGEN ===================== */
+  #behandelingen {
+    padding: var(--spacing-section) 0;
+    background: var(--primary);
+  }
+
+  #behandelingen .section-label { color: var(--secondary); }
+
+  #behandelingen h2 {
+    color: #fff;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    margin-bottom: 16px;
+  }
+
+  .behandelingen-intro {
+    color: #c8bfaf;
+    font-size: 1rem;
+    margin-bottom: 56px;
+    max-width: 560px;
+  }
+
+  .behandelingen-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .behandeling-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(201,162,39,0.2);
+    padding: 36px 32px;
+    position: relative;
+    transition: border-color 0.3s, background 0.3s;
+  }
+
+  .behandeling-card:hover {
+    border-color: var(--secondary);
+    background: rgba(201,162,39,0.06);
+  }
+
+  .behandeling-icon {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .behandeling-card h3 {
+    color: #fff;
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    font-family: var(--font-heading);
+  }
+
+  .behandeling-card p {
+    color: #a89e90;
+    font-size: 0.92rem;
+    line-height: 1.75;
+  }
+
+  .behandelingen-cta {
+    text-align: center;
+    margin-top: 56px;
+  }
+
+  @media (min-width: 768px) {
+    .behandelingen-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .behandelingen-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* ===================== REVIEWS ===================== */
+  #avis {
+    padding: var(--spacing-section) 0;
+    background: var(--background);
+  }
+
+  #avis h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    margin-bottom: 12px;
+  }
+
+  .reviews-header {
+    margin-bottom: 56px;
+  }
+
+  .reviews-overall {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .reviews-overall-stars {
+    color: var(--secondary);
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+  }
+
+  .reviews-overall-text {
+    font-size: 0.9rem;
+    color: #7a7068;
+    font-weight: 500;
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .review-card {
+    background: #fff;
+    padding: 36px 32px;
+    position: relative;
+    box-shadow: 0 8px 40px rgba(18,16,14,0.07);
+  }
+
+  .review-icon {
+    font-size: 2rem;
+    color: var(--secondary);
+    line-height: 1;
+    margin-bottom: 16px;
+    display: block;
+    font-family: Georgia, serif;
+  }
+
+  .review-stars {
+    color: var(--secondary);
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .review-quote {
+    font-size: 0.98rem;
+    color: #3a3530;
+    line-height: 1.8;
+    margin-bottom: 24px;
+    font-style: italic;
+  }
+
+  .review-author {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .review-author-name {
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--primary);
+    letter-spacing: 0.04em;
+  }
+
+  .review-date {
+    font-size: 0.78rem;
+    color: #a89e90;
+    font-weight: 400;
+  }
+
+  @media (min-width: 768px) {
+    .reviews-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* ===================== GALLERY ===================== */
+  #galerie {
+    padding: var(--spacing-section) 0;
+    background: var(--primary);
+    overflow: hidden;
+  }
+
+  #galerie .section-label { color: var(--secondary); }
+
+  #galerie h2 {
+    color: #fff;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    margin-bottom: 12px;
+  }
+
+  .gallery-intro {
+    color: #c8bfaf;
+    font-size: 1rem;
+    margin-bottom: 48px;
+  }
+
+  .carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+    will-change: transform;
+  }
+
+  .carousel-slide {
+    flex: 0 0 calc(100% - 0px);
+    position: relative;
+  }
+
+  .carousel-slide .corner-frame img {
+    height: 480px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .carousel-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .carousel-btn {
+    width: 48px;
+    height: 48px;
+    border: 2px solid var(--secondary);
+    background: transparent;
+    color: var(--secondary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    flex-shrink: 0;
+  }
+
+  .carousel-btn:hover {
+    background: var(--secondary);
+    color: #fff;
+  }
+
+  .carousel-dots {
+    display: flex;
+    gap: 8px;
+  }
+
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
+    background: rgba(201,162,39,0.3);
+    cursor: pointer;
+    transition: background 0.3s;
+    border: none;
+  }
+
+  .carousel-dot.active {
+    background: var(--secondary);
+  }
+
+  @media (min-width: 768px) {
+    .carousel-slide {
+      flex: 0 0 calc(50% - 10px);
+    }
+  }
+
+  /* ===================== HORAIRES ===================== */
+  #horaires {
+    padding: var(--spacing-section) 0;
+    background: var(--background);
+  }
+
+  #horaires h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    margin-bottom: 48px;
+  }
+
+  .horaires-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .hours-table tr {
+    border-bottom: 1px solid rgba(18,16,14,0.08);
+  }
+
+  .hours-table tr:last-child {
+    border-bottom: none;
+  }
+
+  .hours-table td {
+    padding: 14px 0;
+    font-size: 0.95rem;
+    color: var(--text);
+  }
+
+  .hours-table td:first-child {
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--primary);
+    width: 140px;
+  }
+
+  .hours-table td:last-child {
+    color: #5a5248;
+  }
+
+  .hours-table tr.closed td {
+    color: #a89e90;
+  }
+
+  .location-info {
+    margin-top: 28px;
+  }
+
+  .location-info p {
+    font-size: 0.95rem;
+    color: #4a4540;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .location-info p span.icon {
+    color: var(--secondary);
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .map-embed {
+    width: 100%;
+    height: 340px;
+    border: none;
+    display: block;
+  }
+
+  @media (min-width: 768px) {
+    .horaires-inner {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  /* ===================== CONTACT ===================== */
+  #contact {
+    padding: var(--spacing-section) 0;
+    background: var(--primary);
+  }
+
+  #contact .section-label { color: var(--secondary); }
+
+  #contact h2 {
+    color: #fff;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    margin-bottom: 16px;
+  }
+
+  .contact-intro {
+    color: #c8bfaf;
+    font-size: 1rem;
+    margin-bottom: 48px;
+    max-width: 560px;
+  }
+
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .form-group label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #c8bfaf;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(201,162,39,0.25);
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    padding: 14px 18px;
+    outline: none;
+    transition: border-color 0.3s;
+    border-radius: var(--radius);
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--secondary);
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: rgba(200,191,175,0.5);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 140px;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .contact-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .contact-detail-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(201,162,39,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    color: var(--secondary);
+  }
+
+  .contact-detail-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 4px;
+  }
+
+  .contact-detail-value {
+    font-size: 0.95rem;
+    color: #c8bfaf;
+    line-height: 1.6;
+  }
+
+  @media (min-width: 768px) {
+    .contact-inner {
+      grid-template-columns: 1.4fr 1fr;
+    }
+  }
+
+  /* ===================== TRUST SIGNALS ===================== */
+  #vertrouwen {
+    padding: var(--spacing-section) 0;
+    background: var(--background);
+  }
+
+  #vertrouwen h2 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin-bottom: 56px;
+    text-align: center;
+  }
+
+  .trust-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 28px 24px;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(18,16,14,0.06);
+  }
+
+  .trust-check {
+    width: 36px;
+    height: 36px;
+    background: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .trust-item-text {
+    font-size: 0.95rem;
+    color: #3a3530;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  @media (min-width: 768px) {
+    .trust-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .trust-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* ===================== FOOTER ===================== */
+  footer {
+    background: #0a0908;
+    padding: 56px 0 32px;
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 48px;
+  }
+
+  .footer-brand .nav-logo {
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .footer-brand p {
+    font-size: 0.88rem;
+    color: #7a7068;
+    line-height: 1.7;
+    max-width: 280px;
+  }
+
+  .footer-col h4 {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 20px;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-col ul li a {
+    font-size: 0.88rem;
+    color: #7a7068;
+    transition: color 0.3s;
+  }
+
+  .footer-col ul li a:hover { color: var(--secondary); }
+
+  .footer-col p {
+    font-size: 0.88rem;
+    color: #7a7068;
+    line-height: 1.7;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .footer-bottom p {
+    font-size: 0.78rem;
+    color: #5a5248;
+  }
+
+  @media (min-width: 768px) {
+    .footer-inner {
+      grid-template-columns: 1.5fr 1fr 1fr;
+    }
+  }
+
+  /* ===================== RESPONSIVE SPACING ===================== */
+  @media (max-width: 767px) {
+    #hero h1 { font-size: 2.2rem; }
+    .hero-content { padding: 100px 0 60px; }
+    :root { --spacing-section: var(--spacing-section-mobile); }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav aria-label="Hoofdnavigatie">
+  <a href="#hero" class="nav-logo">Sofiya BodyCare</a>
+  <button class="burger" id="burger" aria-label="Menu openen" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul id="nav-menu">
+    <li><a href="#apropos">Over ons</a></li>
+    <li><a href="#behandelingen">Behandelingen</a></li>
+    <li><a href="#avis">Reviews</a></li>
+    <li><a href="#galerie">Galerij</a></li>
+    <li><a href="#horaires">Openingstijden</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li class="nav-cta"><a href="#contact" class="cta" aria-label="Boek nu een afspraak">Boek nu</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero" aria-label="Hero sectie">
+  <div class="hero-bg" role="img" aria-label="Nagelstudio sfeerfoto"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-rating fade-in">
+      <span class="hero-stars" aria-label="4,9 sterren">★★★★★</span>
+      <span class="hero-rating-text">4,9 sterren · 312 reviews</span>
+    </div>
+    <p class="hero-sub fade-in">Nagelstudio &amp; Schoonheidssalon · Antwerpen</p>
+    <h1 class="fade-in">NailCare Sofiya BodyCare</h1>
+    <p class="hero-text fade-in">Welkom bij NailCare Sofiya BodyCare, jouw plek voor nagelverzorging en lichaamsverzorging in Antwerpen. Met een beoordeling van 4,9 sterren op basis van 312 reviews verwennen we je handen, nagels en huid met de aandacht die ze verdienen.</p>
+    <div class="hero-btns fade-in">
+      <a href="#contact" class="cta" aria-label="Boek nu een afspraak">Boek nu</a>
+      <a href="tel:+3248402310" class="cta-outline" aria-label="Bel ons">Bel ons</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="apropos" aria-label="Over ons">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-text-col fade-in">
+        <span class="section-label">Over ons</span>
+        <h2>Over NailCare Sofiya BodyCare</h2>
+        <p>Bij NailCare Sofiya BodyCare draait alles om jou. Ons team neemt de tijd voor elke behandeling en zorgt voor een ontspannen ervaring van begin tot eind. Of je nu komt voor een manicure of een lichaamsbehandeling, we verwelkomen je graag in ons salon aan de Belgiëlei 206/208 in Antwerpen.</p>
+        <p>Wij werken uitsluitend met professionele producten van hoge kwaliteit en hanteren een strikte hygiënische werkwijze. Elke klant verdient persoonlijke aandacht en een resultaat om trots op te zijn.</p>
+        <div class="about-badges">
+          <div class="about-badge">
+            <span class="about-badge-num">4,9</span>
+            <span class="about-badge-label">Gemiddelde score</span>
+          </div>
+          <div class="about-badge">
+            <span class="about-badge-num">312</span>
+            <span class="about-badge-label">Tevreden klanten</span>
+          </div>
+          <div class="about-badge">
+            <span class="about-badge-num">6</span>
+            <span class="about-badge-label">Dagen per week open</span>
+          </div>
+        </div>
+        <a href="#contact" class="cta" style="margin-top:32px;" aria-label="Maak een afspraak">Maak een afspraak</a>
+      </div>
+      <div class="about-img-col fade-in">
+        <div class="corner-frame">
+          <img src="assets/gallery-1.jpg" alt="Sfeer in NailCare Sofiya BodyCare salon in Antwerpen" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEHANDELINGEN -->
+<section id="behandelingen" aria-label="Onze behandelingen">
+  <div class="container">
+    <span class="section-label fade-in">Wat wij aanbieden</span>
+    <h2 class="fade-in">Onze behandelingen</h2>
+    <p class="behandelingen-intro fade-in">Ontdek onze behandelingen voor nagelverzorging en lichaamsverzorging. Boek eenvoudig online via onze boekingspagina.</p>
+    <div class="behandelingen-grid">
+      <div class="behandeling-card fade-in">
+        <span class="behandeling-icon">💅</span>
+        <h3>Manicure &amp; Gelnagels</h3>
+        <p>Een verzorgde manicure of prachtige gelnagels op maat. We werken nauwkeurig en nemen de tijd voor een perfect resultaat dat lang meegaat.</p>
+      </div>
+      <div class="behandeling-card fade-in">
+        <span class="behandeling-icon">✨</span>
+        <h3>Gellak</h3>
+        <p>Langdurige gellak in een breed kleurenpalet. Glanzend, sterk en weken lang mooi — ideaal voor wie elke dag wil stralen.</p>
+      </div>
+      <div class="behandeling-card fade-in">
+        <span class="behandeling-icon">🦶</span>
+        <h3>Pedicure</h3>
+        <p>Een grondige pedicurebehandeling voor zachte, verzorgde voeten. We combineren verzorging met ontspanning voor een heerlijk resultaat.</p>
+      </div>
+      <div class="behandeling-card fade-in">
+        <span class="behandeling-icon">🌿</span>
+        <h3>Bodycare &amp; Massage</h3>
+        <p>Verwenbehandelingen voor het hele lichaam. Van ontspannende massages tot intensieve huidverzorging — jouw lichaam verdient de beste zorg.</p>
+      </div>
+      <div class="behandeling-card fade-in">
+        <span class="behandeling-icon">🌸</span>
+        <h3>Gezichtsbehandeling</h3>
+        <p>Professionele gezichtsbehandelingen afgestemd op jouw huidtype. Stralende, gezonde huid begint met de juiste verzorging.</p>
+      </div>
+      <div class="behandeling-card fade-in">
+        <span class="behandeling-icon">🪷</span>
+        <h3>Ontharing &amp; Waxen</h3>
+        <p>Zachte en effectieve ontharing met warme wax. Snel, hygiënisch en met een langdurig glad resultaat voor een zijdezacht gevoel.</p>
+      </div>
+    </div>
+    <div class="behandelingen-cta fade-in">
+      <a href="https://widget.treatwell.be/salon/sofiya-nailcare/" target="_blank" rel="noopener" class="cta" aria-label="Boek nu een behandeling online">Boek nu online</a>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="avis" aria-label="Klantbeoordelingen">
+  <div class="container">
+    <div class="reviews-header fade-in">
+      <span class="section-label">Wat onze klanten zeggen</span>
+      <h2>Wat onze klanten zeggen</h2>
+      <div class="reviews-overall">
+        <span class="reviews-overall-stars" aria-label="4,9 sterren">★★★★★</span>
+        <span class="reviews-overall-text">4,9 gemiddeld op basis van 312 beoordelingen</span>
+      </div>
+    </div>
+    <div class="reviews-grid">
+
+      <div class="review-card fade-in">
+        <span class="review-icon" aria-hidden="true">"</span>
+        <span class="review-stars" aria-label="4 sterren">★★★★☆</span>
+        <p class="review-quote">"J'ai eu une super expérience pour ma première manucure ! Elles ont pris leur temps et ont été adorables avec moi et mes ongles :)) J'adore le résultat final"</p>
+        <div class="review-author">
+          <span class="review-author-name">Mila Vanden Eede</span>
+          <span class="review-date">minder dan een week geleden</span>
+        </div>
+      </div>
+
+      <div class="review-card fade-in">
+        <span class="review-icon" aria-hidden="true">"</span>
+        <span class="review-stars" aria-label="5 sterren">★★★★★</span>
+        <p class="review-quote">"Très satisfaite de ma manucure. J'y retournerai sans hésiter."</p>
+        <div class="review-author">
+          <span class="review-author-name">Kira Sow</span>
+          <span class="review-date">2 maanden geleden</span>
+        </div>
+      </div>
+
+      <div class="review-card fade-in">
+        <span class="review-icon" aria-hidden="true">"</span>
+        <span class="review-stars" aria-label="5 sterren">★★★★★</span>
+        <p class="review-quote">"Je suis extrêmement satisfaite du résultat ! J'adore !"</p>
+        <div class="review-author">
+          <span class="review-author-name">Anoniem</span>
+          <span class="review-date">een maand geleden</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="galerie" aria-label="Galerij">
+  <div class="container">
+    <span class="section-label fade-in">Galerij</span>
+    <h2 class="fade-in">Een kijkje in ons salon</h2>
+    <p class="gallery-intro fade-in">Een blik op de sfeer en het vakmanschap bij NailCare Sofiya BodyCare.</p>
+    <div class="carousel-wrapper fade-in">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-slide">
+          <div class="corner-frame">
+            <img src="assets/gallery-1.jpg" alt="Nagelbehandeling bij NailCare Sofiya BodyCare Antwerpen" loading="lazy">
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <div class="corner-frame">
+            <img src="assets/gallery-2.jpg" alt="Schoonheidsbehandeling bij NailCare Sofiya BodyCare Antwerpen" loading="lazy">
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <div class="corner-frame">
+            <img src="assets/hero.jpg" alt="Sfeer in het salon van NailCare Sofiya BodyCare" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-controls fade-in">
+      <button class="carousel-btn" id="prevBtn" aria-label="Vorige afbeelding">&#8592;</button>
+      <div class="carousel-dots" id="carouselDots"></div>
+      <button class="carousel-btn" id="nextBtn" aria-label="Volgende afbeelding">&#8594;</button>
+    </div>
+  </div>
+</section>
+
+<!-- HORAIRES & LOCATIE -->
+<section id="horaires" aria-label="Openingstijden en locatie">
+  <div class="container">
+    <span class="section-label fade-in">Bezoek ons</span>
+    <h2 class="fade-in">Openingstijden &amp; locatie</h2>
+    <div class="horaires-inner">
+      <div class="fade-in">
+        <table class="hours-table" aria-label="Openingstijden NailCare Sofiya BodyCare">
+          <tbody>
+            <tr>
+              <td>Maandag</td>
+              <td>09:00 – 19:00</td>
+            </tr>
+            <tr>
+              <td>Dinsdag</td>
+              <td>09:00 – 19:00</td>
+            </tr>
+            <tr>
+              <td>Woensdag</td>
+              <td>09:00 – 19:00</td>
+            </tr>
+            <tr>
+              <td>Donderdag</td>
+              <td>09:00 – 19:00</td>
+            </tr>
+            <tr>
+              <td>Vrijdag</td>
+              <td>09:00 – 19:00</td>
+            </tr>
+            <tr>
+              <td>Zaterdag</td>
+              <td>09:00 – 19:00</td>
+            </tr>
+            <tr class="closed">
+              <td>Zondag</td>
+              <td>Gesloten</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="location-info" style="margin-top:32px;">
+          <p><span class="icon">📍</span> Belgiëlei 206/208, 2018 Antwerpen, België</p>
+          <p><span class="icon">📞</span> <a href="tel:+3248402310" style="color:#4a4540;">+32 484 02 31 03</a></p>
+          <p><span class="icon">🚗</span> Gratis parkeergelegenheid in de buurt.</p>
+        </div>
+        <a href="#contact" class="cta" style="margin-top:32px;display:inline-block;" aria-label="Maak een afspraak">Maak een afspraak</a>
+      </div>
+      <div class="fade-in">
+        <iframe
+          class="map-embed"
+          src="https://www.google.com/maps?q=Belgi%C3%ABlei+206,+2018+Antwerpen,+Belgi%C3%AB&output=embed"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Locatie NailCare Sofiya BodyCare op Google Maps"
+          aria-label="Google Maps kaart van NailCare Sofiya BodyCare, Belgiëlei 206/208, 2018 Antwerpen">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section id="contact" aria-label="Contactformulier">
+  <div class="container">
+    <span class="section-label fade-in">Contact</span>
+    <h2 class="fade-in">Neem contact op</h2>
+    <p class="contact-intro fade-in">Heb je een vraag of wil je een afspraak maken? Bel ons op +32 484 02 31 03 of stuur ons een bericht via het formulier hieronder.</p>
+    <div class="contact-inner">
+      <form class="contact-form fade-in" action="https://checkout.kamkod.com/contact" method="POST" aria-label="Contactformulier NailCare Sofiya BodyCare">
+        <input type="hidden" name="lead_id" value="ChIJLW5udy33w0cRFsebzVOCaPs">
+        <div class="form-group">
+          <label for="name">Uw naam</label>
+          <input type="text" id="name" name="name" placeholder="Uw volledige naam" required aria-required="true">
+        </div>
+        <div class="form-group">
+          <label for="email">E-mailadres</label>
+          <input type="email" id="email" name="email" placeholder="uw@email.be" required aria-required="true">
+        </div>
+        <div class="form-group">
+          <label for="message">Uw bericht</label>
+          <textarea id="message" name="message" placeholder="Stel uw vraag of beschrijf de gewenste behandeling." required aria-required="true"></textarea>
+        </div>
+        <button type="submit" class="cta" aria-label="Verstuur uw bericht">Boek nu</button>
+      </form>
+      <div class="contact-details fade-in">
+        <div class="contact-detail-item">
+          <div class="contact-detail-icon" aria-hidden="true">📍</div>
+          <div>
+            <p class="contact-detail-label">Adres</p>
+            <p class="contact-detail-value">Belgiëlei 206/208<br>2018 Antwerpen, België</p>
+          </div>
+        </div>
+        <div class="contact-detail-item">
+          <div class="contact-detail-icon" aria-hidden="true">📞</div>
+          <div>
+            <p class="contact-detail-label">Telefoon</p>
+            <p class="contact-detail-value"><a href="tel:+3248402310" style="color:#c8bfaf;">+32 484 02 31 03</a></p>
+          </div>
+        </div>
+        <div class="contact-detail-item">
+          <div class="contact-detail-icon" aria-hidden="true">🕐</div>
+          <div>
+            <p class="contact-detail-label">Openingstijden</p>
+            <p class="contact-detail-value">Maandag t/m zaterdag<br>09:00 – 19:00</p>
+          </div>
+        </div>
+        <div class="contact-detail-item">
+          <div class="contact-detail-icon" aria-hidden="true">💳</div>
+          <div>
+            <p class="contact-detail-label">Betaling</p>
+            <p class="contact-detail-value">Betaal met kaart of cash.</p>
+          </div>
+        </div>
+        <a href="https://widget.treatwell.be/salon/sofiya-nailcare/" target="_blank" rel="noopener" class="cta" style="margin-top:8px;" aria-label="Boek online via Treatwell">Boek online via Treatwell</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST SIGNALS -->
+<section id="vertrouwen" aria-label="Waarom kiezen voor NailCare Sofiya BodyCare">
+  <div class="container">
+    <span class="section-label fade-in" style="text-align:center;display:block;">Onze beloften</span>
+    <h2 class="fade-in">Waarom kiezen voor NailCare Sofiya BodyCare</h2>
+    <div class="trust-grid">
+      <div class="trust-item fade-in">
+        <div class="trust-check" aria-hidden="true">✓</div>
+        <p class="trust-item-text">Gecertificeerde nagelstyliste met ruime ervaring in nagelverzorging en schoonheidsbehandelingen.</p>
+      </div>
+      <div class="trust-item fade-in">
+        <div class="trust-check" aria-hidden="true">✓</div>
+        <p class="trust-item-text">Professionele producten van hoge kwaliteit voor een duurzaam en mooi resultaat.</p>
+      </div>
+      <div class="trust-item fade-in">
+        <div class="trust-check" aria-hidden="true">✓</div>
+        <p class="trust-item-text">Strikte hygiënische werkwijze bij elke behandeling voor uw veiligheid en comfort.</p>
+      </div>
+      <div class="trust-item fade-in">
+        <div class="trust-check" aria-hidden="true">✓</div>
+        <p class="trust-item-text">Persoonlijke aandacht voor elke klant — u bent geen nummer, maar een gewaardeerde gast.</p>
+      </div>
+      <div class="trust-item fade-in">
+        <div class="trust-check" aria-hidden="true">✓</div>
+        <p class="trust-item-text">4,9 sterren op basis van 312 reviews — onze klanten spreken voor zich.</p>
+      </div>
+      <div class="trust-item fade-in">
+        <div class="trust-check" aria-hidden="true">✓</div>
+        <p class="trust-item-text">Gratis parkeergelegenheid in de buurt en betaling mogelijk met kaart of cash.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer aria-label="Voettekst">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="nav-logo">Sofiya BodyCare 💅</span>
+        <p>Nagelstudio &amp; schoonheidssalon in Antwerpen. Wij verwennen u met de aandacht die u verdient.</p>
+        <a href="#contact" class="cta" style="margin-top:24px;display:inline-block;" aria-label="Boek nu een afspraak">Boek nu</a>
+      </div>
+      <div class="footer-col">
+        <h4>Navigatie</h4>
+        <ul>
+          <li><a href="#apropos">Over ons</a></li>
+          <li><a href="#behandelingen">Behandelingen</a></li>
+          <li><a href="#avis">Reviews</a></li>
+          <li><a href="#galerie">Galerij</a></li>
+          <li><a href="#horaires">Openingstijden</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Belgiëlei 206/208<br>2018 Antwerpen, België</p>
+        <p style="margin-top:12px;"><a href="tel:+3248402310" style="color:#7a7068;">+32 484 02 31 03</a></p>
+        <p style="margin-top:8px;">Ma – Za: 09:00 – 19:00</p>
+        <p style="margin-top:4px;">Zondag: Gesloten</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 NailCare Sofiya BodyCare 💅 · Belgiëlei 206/208, 2018 Antwerpen, België · +32 484 02 31 03</p>
+      <p>Nagelstudio &amp; Schoonheidssalon in Antwerpen</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // BURGER MENU
+  const burger = document.getElementById('burger');
+  const navMenu = document.getElementById('nav-menu');
+
+  burger.addEventListener('click', function() {
+    const isOpen = navMenu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  navMenu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      navMenu.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // FADE-IN INTERSECTION OBSERVER
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  fadeEls.forEach(function(el) { observer.observe(el); });
+
+  // CAROUSEL
+  (function() {
+    const track = document.getElementById('carouselTrack');
+    const slides = track ? track.querySelectorAll('.carousel-slide') : [];
+    const dotsContainer = document.getElementById('carouselDots');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    if (!track || slides.length === 0) return;
+
+    let current = 0;
+    let slidesPerView = window.innerWidth >= 768 ? 2 : 1;
+    let maxIndex = Math.max(0, slides.length - slidesPerView);
+
+    // Create dots
+    function createDots() {
+      dotsContainer.innerHTML = '';
+      const total = maxIndex + 1;
+      for (let i = 0; i < total; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot' + (i === current ? ' active' : '');
+        dot.setAttribute('aria-label', 'Ga naar afbeelding ' + (i + 1));
+        dot.addEventListener('click', function() { goTo(i); });
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function updateDots() {
+      const dots = dotsContainer.querySelectorAll('.carousel-dot');
+      dots.forEach(function(d, i) {
+        d.classList.toggle('active', i === current);
+      });
+    }
+
+    function getSlideWidth() {
+      if (slides.length === 0) return 0;
+      return slides[0].offsetWidth + 20;
+    }
+
+    function goTo(index) {
+      current = Math.max(0, Math.min(index, maxIndex));
+      track.style.transform = 'translateX(-' + (current * getSlideWidth()) + 'px)';
+      updateDots();
+    }
+
+    prevBtn.addEventListener('click', function() { goTo(current - 1); });
+    nextBtn.addEventListener('click', function() { goTo(current + 1); });
+
+    function onResize() {
+      slidesPerView = window.innerWidth >= 768 ? 2 : 1;
+      maxIndex = Math.max(0, slides.length - slidesPerView);
+      current = Math.min(current, maxIndex);
+      createDots();
+      track.style.transform = 'translateX(-' + (current * getSlideWidth()) + 'px)';
+    }
+
+    createDots();
+    window.addEventListener('resize', onResize);
+  })();
+</script>
+<!-- KAMKOD:DEMO_START -->
+<script>
+(function(){
+  var URL = 'https://checkout.kamkod.com/?lead=ChIJLW5udy33w0cRFsebzVOCaPs';
+  document.addEventListener('click', function(e){
+    var el = e.target.closest('a, button, [role="button"]');
+    if(!el || el.closest('form')) return;               /* formulaire -> endpoint contact */
+    if(el.classList.contains('cta')) { e.preventDefault(); window.location.href = URL; return; }
+    if(el.closest('header nav, nav')) return;           /* navigation interne de la démo */
+    var a = e.target.closest('a');
+    if(!a) return;                                      /* bouton seul hors nav: on laisse */
+    var href = a.getAttribute('href') || '';
+    if(href.charAt(0) === '#') return;                  /* ancres de section */
+    if(/^https?:|^\/\//i.test(href)) return;          /* lien externe réel */
+    e.preventDefault(); window.location.href = URL;     /* tel:, mailto:, javascript:… */
+  }, true);
+})();
+</script>
+<div id="kamkod-demo-banner" style="position:fixed;bottom:0;left:0;right:0;background:#000;color:#fff;padding:12px 16px;text-align:center;z-index:9999;font-family:system-ui,sans-serif;font-size:14px;">
+  Ceci est un aperçu de votre futur site — <a href="https://checkout.kamkod.com/?lead=ChIJLW5udy33w0cRFsebzVOCaPs" style="color:#FFD700;font-weight:600;">activez-le maintenant</a>
+</div>
+<!-- KAMKOD:DEMO_END -->
+</body>
+</html>
